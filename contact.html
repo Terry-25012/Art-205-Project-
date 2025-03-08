@@ -1,0 +1,135 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <title>Contact Me - My Portfolio</title>  
+</head>  
+<body>  
+    <header>  
+        <h1 class="logo">Welcome</h1>  
+        <nav>  
+            <a href="index.html">Home</a>  
+            <a href="about.html">About Me</a>  
+            <a href="contact.html">Contact</a>  
+        </nav>  
+    </header>  
+    
+    <main>  
+        <div class="container"> 
+        <div class="contact-info">  
+            <h2>My Address</h2>  <br/>
+            <p>AirfieldSinkor</p>,</p>  
+            <p>Monrovia City, Liberia</p> <br/> <br/>
+
+            <h2>Contact Information</h2> <br/> 
+            <p>Email: <a href="mailto:giftedhandsinc26@gmail.com">terrydigkar20@gmail.com</a></p><br/>  
+            <p>Phone: <a href="tel:+231775966092">+ (231) 775 966 092</a></p>
+        </div>  
+
+        <div class="c-icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon>   __Terry S Digkar</a><br/>
+            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon>   ___Terry S Digkar (+231-775-966-092)</a><br/>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon>  __Terry S. Digkar</a><br/>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon>   __Terry S. Digkar</a><br/>
+        
+        </div>   
+        <section class="contact">  
+            <h2>Get in Touch</h2>  
+            <form id="contactForm">  
+                <label for="name">Name:</label>  
+                <input type="text" id="name" name="name" required>  
+
+                <label for="email">Email:</label>  
+                <input type="email" id="email" name="email" required>  
+
+                <label for="message">Message:</label>  
+                <textarea id="message" name="message" required></textarea>  
+
+                <button type="submit" class="submit-btn">Submit</button>  
+            </form>  
+        </section> 
+<br/><br/>
+</div>
+        </div>
+        </div>
+    </main> 
+
+   <!-- Modal for Confirmation -->  
+    <div id="confirmationModal" class="modal">  
+        <div class="modal-content">  
+            <span class="close-button" id="closeConfirmationModal">&times;</span>  
+            <h2>Confirmation</h2>  
+            <p>Are you sure you want to submit this form?</p>  
+            <button id="confirmSubmit">Confirm</button>  
+            <button id="cancelSubmit">Cancel</button>  
+        </div>  
+    </div>  
+
+    <footer>  
+        <p>&copy; 2025 Terry S. Digkar. - All Rights Reserved</p> 
+        <br/>
+        <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-Github"></ion-icon></a>
+        </div>
+    </footer>  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {  
+    const contactForm = document.getElementById('contactForm');  
+    const confirmationModal = document.getElementById('confirmationModal');  
+    const closeModalButton = document.getElementById('closeConfirmationModal');  
+    const confirmSubmitButton = document.getElementById('confirmSubmit');  
+    const cancelSubmitButton = document.getElementById('cancelSubmit');  
+
+    // Show the modal when the form is submitted  
+    contactForm.addEventListener('submit', (event) => {  
+        event.preventDefault(); // Prevent actual form submission  
+        confirmationModal.style.display = 'block'; // Show the modal  
+    });  
+
+    // Close the modal  
+    closeModalButton.addEventListener('click', () => {  
+        confirmationModal.style.display = 'none';  
+    });  
+
+    // Confirm submission  
+    confirmSubmitButton.addEventListener('click', () => {  
+        // Here you can handle the actual form submission  
+        // For demonstration purposes, we will log the form data  
+        console.log('Form submitted:', {  
+            name: document.getElementById('name').value,  
+            email: document.getElementById('email').value,  
+            message: document.getElementById('message').value,  
+        });  
+
+        // Close the modal  
+        confirmationModal.style.display = 'none';  
+
+        // Optionally reset the form  
+        contactForm.reset();  
+        alert('Thank you for your message!');  
+    });  
+
+    // Cancel submission  
+    cancelSubmitButton.addEventListener('click', () => {  
+        confirmationModal.style.display = 'none'; // Close the modal  
+    });  
+
+    // Close modal when clicking outside of it  
+    window.addEventListener('click', (event) => {  
+        if (event.target === confirmationModal) {  
+            confirmationModal.style.display = 'none';  
+        }  
+    });  
+});
+    </script>  
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>  
+</html>

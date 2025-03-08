@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href= />
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio - Home</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">Welcome</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <img id="profile-img" src="profile.jpg" alt="My Profile Photo">
+      <h1>Hi, I'm Terry S. Digkar</h1>
+      <p>Navigate through some of my best Projects, Skills, About me and More... </p>
+    </section>
+    
+    <section class="projects">
+      <h2 style="text-align: center;">My Top Two (2) Projects</h2> <br />
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="project-1.jpg" alt="Project 1">
+          <h3></h3>
+          <p><br ></b></p> <br />
+          <a class="project-link" href="project-1.jpg"><b>View</b></a>
+        </div>
+        <div class="project-card">
+          <img src="project-2.jpg" alt="Project 2">
+          <h3></h3>
+          <p></p> <br />
+          <a class="project-link" href="project-2.jpg"><b>View</b></a>
+        </div>
+      </div>
+    </section>
+    <br />
+    <div>
+      <h2 style="text-align: center;">Skills</h2> <br />
+      <div class="skills-container">
+        <div class="skill">Human Right Advocate</div>
+        <div class="skill">Graphic Artist</div>
+        <div class="skill">Emerging Web-Designer</div>
+        <div class="skill">Computer Hardware Technician</div>
+      </div>
+    </div>
+  </main>
+  <br /><br />
+  
+  <!-- Modal for Profile Photo -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeProfileModal">&times;</span>
+      <h2>More About Me <b>T. Digkar</b></h2>
+      <p>
+  A student of the Starz University, studying Information Technology.<br>
+  I am a Graphic Designer who is passionate in doing things related to computer.
+  I'm currently self employed. A young goal seeker and an human rights Advocates.
+</p>
+    </div>
+  </div>
+  
+  <!-- Modal for Viewing Image -->
+  <div id="imageModal" class="modal">
+    <span class="close-button" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  
+  <footer>
+    <p>&copy; All Rights Reserved-Mr. Julius G. Doe, Jr. 2024 </p>
+    <br />
+    <div class="icons">
+      <a href="https://web.facebook.com/?_rdc=1&_rdr"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-Github"></ion-icon></a>
+    </div>
+  </footer>
+  
+  <script>
+    // Modal functionality for profile photo  
+    document.getElementById("profile-img").onclick = function() {
+      document.getElementById("profileModal").style.display = "block";
+    }
+    
+    document.getElementById("closeProfileModal").onclick = function() {
+      document.getElementById("profileModal").style.display = "none";
+    }
+  </script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  
+</body>
+</html>
